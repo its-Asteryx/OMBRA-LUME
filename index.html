@@ -6,7 +6,6 @@
 <title>OMBRA LUME | Celestial Accessories</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <style>
-    /* CSS Reset */
     * {
         margin: 0;
         padding: 0;
@@ -15,7 +14,6 @@
         transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
     }
 
-    /* CSS Variables for colors */
     :root {
         --bg-gradient-start: #ffffff;
         --bg-gradient-end: #05081a;
@@ -60,7 +58,6 @@
         --moon-spot-bg: #0a0c23;
     }
 
-    /* Dark mode overrides */
     body.dark-mode {
         --bg-gradient-start: #05081a;
         --bg-gradient-end: #0a0c23;
@@ -105,10 +102,9 @@
         --moon-spot-bg: #e8e6d0;
     }
 
-    /* Moon styles - positioned under header on the right */
     .moon {
         position: fixed;
-        top: 75px; /* Just below the header */
+        top: 75px;
         right: 50px;
         width: 80px;
         height: 80px;
@@ -119,7 +115,6 @@
         transition: background 0.5s ease, box-shadow 0.5s ease;
     }
 
-    /* Moon craters */
     .moon::before {
         content: "";
         position: absolute;
@@ -137,7 +132,6 @@
             40px 40px 0 0 var(--moon-spot-bg);
     }
 
-    /* Moon glow effect */
     .moon::after {
         content: "";
         position: absolute;
@@ -152,19 +146,12 @@
         transition: all 0.5s ease;
     }
 
-    /* Moon animation */
     @keyframes moonFloat {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-5px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
     }
 
-    .moon {
-        animation: moonFloat 8s ease-in-out infinite;
-    }
+    .moon { animation: moonFloat 8s ease-in-out infinite; }
 
     body {
         background: linear-gradient(to bottom, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
@@ -175,7 +162,6 @@
         transition: background 0.5s ease, color 0.5s ease;
     }
 
-    /* Stars Background - adapt colors for light/dark mode */
     body::before {
         content: "";
         position: fixed;
@@ -199,25 +185,14 @@
         transition: background 0.5s ease;
     }
 
-    /* Stars color for light mode */
-    body {
-        --stars-rgb: 10,12,35;
-    }
-    /* Stars color for dark mode */
-    body.dark-mode {
-        --stars-rgb: 255,255,255;
-    }
+    body { --stars-rgb: 10,12,35; }
+    body.dark-mode { --stars-rgb: 255,255,255; }
 
     @keyframes twinkle {
-        0% {
-            opacity: 0.6;
-        }
-        100% {
-            opacity: 0.9;
-        }
+        0% { opacity: 0.6; }
+        100% { opacity: 0.9; }
     }
 
-    /* Header Styles */
     header {
         background-color: var(--header-bg);
         color: var(--header-text);
@@ -245,7 +220,6 @@
         width: 100%;
     }
 
-    /* Logo with image and text */
     .logo {
         display: flex;
         align-items: center;
@@ -337,7 +311,6 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Modal Styles */
     .modal {
         display: none;
         position: fixed;
@@ -453,14 +426,12 @@
         text-decoration: underline;
     }
 
-    /* Main Content Styles */
     main {
         margin-top: 100px;
         padding: 40px 20px;
         transition: color 0.5s ease;
     }
 
-    /* Hero Section */
     .hero {
         text-align: center;
         margin-bottom: 60px;
@@ -496,7 +467,6 @@
         line-height: 1.6;
     }
 
-    /* Accessories Showcase Section */
     .accessories-showcase {
         background: var(--accessory-bg);
         border-radius: 15px;
@@ -509,14 +479,14 @@
         color: var(--accessory-text);
         transition: background 0.5s ease, border-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
     }
+
     .accessories-showcase h2 {
-    color: var(--accessory-text);
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    text-shadow: 0 0 10px var(--button-bg-start + "33");
-    padding-left: 30px; /* Adjust this value as needed */
-}
+        color: var(--accessory-text);
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        text-shadow: 0 0 10px var(--button-bg-start + "33");
+    }
 
     .accessories-grid {
         display: grid;
@@ -613,7 +583,6 @@
         background: var(--button-bg-end);
     }
 
-    /* AI Builder Section */
     .ai-builder {
         background: var(--accessory-bg);
         border-radius: 15px;
@@ -709,13 +678,15 @@
     }
 
     .ai-result-image {
-        max-width: 200px;
-        max-height: 200px;
-        margin-bottom: 20px;
+        max-width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(74, 91, 255, 0.3);
+        transition: transform 0.3s ease;
         display: none;
-        border-radius: 10px;
-        border: 1px solid var(--button-bg-start);
-        transition: border-color 0.5s ease;
+    }
+
+    .ai-result-image:hover {
+        transform: scale(1.05);
     }
 
     .generate-btn {
@@ -743,7 +714,6 @@
         box-shadow: none;
     }
 
-    /* Footer Styles */
     footer {
         background: var(--footer-bg);
         color: var(--footer-text);
@@ -754,7 +724,6 @@
         transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
     }
 
-    /* Smaller, brilliant, elegant footer stars */
     footer::before {
         content: "";
         position: absolute;
@@ -885,104 +854,34 @@
         position: relative;
     }
 
-    /* Animation for AI Generation */
     @keyframes pulse {
-        0% {
-            transform: scale(1);
-            opacity: 0.7;
-        }
-        50% {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1);
-            opacity: 0.7;
-        }
+        0% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.7; }
     }
 
-    .generating {
-        animation: pulse 1.5s infinite;
-    }
+    .generating { animation: pulse 1.5s infinite; }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.2rem;
-        }
-
-        .builder-container {
-            flex-direction: column;
-        }
-
-        .footer-container {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .nav-links {
-            gap: 15px;
-        }
-
-        .auth-links {
-            margin-left: 15px;
-            padding-left: 15px;
-        }
-        
-        /* Adjust moon size and position on mobile */
-        .moon {
-            width: 60px;
-            height: 60px;
-            top: 70px;
-            right: 20px;
-        }
+        .hero h1 { font-size: 2.2rem; }
+        .builder-container { flex-direction: column; }
+        .footer-container { grid-template-columns: 1fr 1fr; }
+        .nav-links { gap: 15px; }
+        .auth-links { margin-left: 15px; padding-left: 15px; }
+        .moon { width: 60px; height: 60px; top: 70px; right: 20px; }
     }
 
     @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 1.8rem;
-        }
-
-        .accessories-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .footer-container {
-            grid-template-columns: 1fr;
-        }
-
-        .add-to-cart {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .header-container {
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .nav-links {
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        .auth-links {
-            border-left: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-        
-        /* Further adjust moon on small screens */
-        .moon {
-            width: 50px;
-            height: 50px;
-            top: 65px;
-            right: 15px;
-        }
+        .hero h1 { font-size: 1.8rem; }
+        .accessories-grid { grid-template-columns: 1fr; }
+        .footer-container { grid-template-columns: 1fr; }
+        .add-to-cart { width: 100%; margin-bottom: 10px; }
+        .header-container { flex-wrap: wrap; gap: 15px; }
+        .nav-links { width: 100%; justify-content: space-between; }
+        .auth-links { border-left: none; margin-left: 0; padding-left: 0; }
+        .moon { width: 50px; height: 50px; top: 65px; right: 15px; }
     }
 
-    /* Dark mode toggle button */
     .dark-mode-toggle {
         position: fixed;
         bottom: 20px;
@@ -1002,10 +901,7 @@
         background-color: var(--button-bg-end);
     }
 
-    /* Cart Modal Styles */
-    #cart-modal .modal-content {
-        max-width: 500px;
-    }
+    #cart-modal .modal-content { max-width: 500px; }
     #cart-items-list div {
         display: flex;
         justify-content: space-between;
@@ -1028,7 +924,6 @@
 </style>
 </head>
 <body>
-    <!-- Moon Element - positioned under header on the right -->
     <div class="moon"></div>
 
     <header>
@@ -1051,7 +946,6 @@
         </div>
     </header>
 
-    <!-- Cart Modal -->
     <div id="cart-modal" class="modal">
       <div class="modal-content">
         <span class="close" id="cart-close">&times;</span>
@@ -1061,7 +955,6 @@
       </div>
     </div>
 
-    <!-- Login Modal -->
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -1083,7 +976,6 @@
         </div>
     </div>
 
-    <!-- Signup Modal -->
     <div id="signup-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -1121,11 +1013,10 @@
             </p>
         </section>
 
-        <!-- Accessories Showcase Section -->
         <section class="accessories-showcase">
             <h2><i class="fas fa-star"></i> Featured Accessories</h2>
             <div class="accessories-grid" id="accessories-grid">
-                <!-- Product 1 - Moon Necklace -->
+                <!-- Original Products -->
                 <div class="accessory-item">
                     <div class="accessory-image">
                         <img src="product1.png" alt="Moon Necklace" />
@@ -1142,7 +1033,7 @@
                         </button>
                     </div>
                 </div>
-                <!-- Product 2 - Waist Necklace -->
+
                 <div class="accessory-item">
                     <div class="accessory-image">
                         <img src="product2.jpg" alt="Waist Necklace" />
@@ -1159,7 +1050,7 @@
                         </button>
                     </div>
                 </div>
-                <!-- Product 3 - Ear Piercing -->
+
                 <div class="accessory-item">
                     <div class="accessory-image">
                         <img src="product3.png" alt="Ear Piercing" />
@@ -1176,10 +1067,61 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- New Pieces -->
+                <div class="accessory-item">
+                    <div class="accessory-image">
+                        <img src="piece1.jpg" alt="Celestial Piece 1" />
+                    </div>
+                    <div class="accessory-info">
+                        <h3>Celestial Piece 1</h3>
+                        <p>First component of the cosmic trilogy collection</p>
+                        <span class="accessory-price">22.00 DT</span>
+                        <button class="add-to-cart" data-id="4">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="add-to-builder" data-id="4">
+                            <i class="fas fa-plus"></i> Add to AI Builder
+                        </button>
+                    </div>
+                </div>
+
+                <div class="accessory-item">
+                    <div class="accessory-image">
+                        <img src="piece2.jpg" alt="Celestial Piece 2" />
+                    </div>
+                    <div class="accessory-info">
+                        <h3>Celestial Piece 2</h3>
+                        <p>Second component of the cosmic trilogy collection</p>
+                        <span class="accessory-price">10.00 DT</span>
+                        <button class="add-to-cart" data-id="5">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="add-to-builder" data-id="5">
+                            <i class="fas fa-plus"></i> Add to AI Builder
+                        </button>
+                    </div>
+                </div>
+
+                <div class="accessory-item">
+                    <div class="accessory-image">
+                        <img src="piece3.jpg" alt="Celestial Piece 3" />
+                    </div>
+                    <div class="accessory-info">
+                        <h3>Celestial Piece 3</h3>
+                        <p>Third component of the cosmic trilogy collection</p>
+                        <span class="accessory-price">10.00 DT</span>
+                        <button class="add-to-cart" data-id="6">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="add-to-builder" data-id="6">
+                            <i class="fas fa-plus"></i> Add to AI Builder
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- AI Builder Section -->
         <section class="ai-builder">
             <h2><i class="fas fa-magic"></i> AI Accessory Designer</h2>
             <div class="builder-container">
@@ -1211,7 +1153,7 @@
                 <h3>OMBRA LUME</h3>
                 <p>Creating celestial-inspired jewelry that connects you to the magic of the universe.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/insaf_arraouki/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/ombra_lume/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-pinterest"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
@@ -1246,17 +1188,12 @@
         </div>
     </footer>
 
-    <!-- Dark Mode Toggle Button -->
     <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
 
     <script>
-        // Cart array to store added items
         let cart = [];
-        // Selected items array
         let selectedItems = [];
-        // DOM Elements
         const cartCount = document.querySelector('.cart-count');
-        const accessoriesGrid = document.getElementById('accessories-grid');
         const selectedItemsContainer = document.getElementById('selected-items');
         const generateBtn = document.getElementById('generate-btn');
         const aiPlaceholder = document.getElementById('ai-placeholder');
@@ -1270,47 +1207,27 @@
         const showLogin = document.getElementById('show-login');
         const closeButtons = document.querySelectorAll('.close');
         const darkModeToggle = document.querySelector('.dark-mode-toggle');
-
-        // Cart modal
         const cartModal = document.getElementById('cart-modal');
         const cartIcon = document.getElementById('cart-icon');
         const cartClose = document.getElementById('cart-close');
         const closeCartBtn = document.getElementById('close-cart-btn');
         const cartItemsList = document.getElementById('cart-items-list');
 
-        // Product data for AI builder and cart
         const products = [
-            {
-                id: 1,
-                name: "Moon Necklace",
-                description: "Elegant necklace featuring a crescent moon pendant.",
-                price: 59.99,
-                image: "product1.png"
-            },
-            {
-                id: 2,
-                name: "Waist Necklace",
-                description: "Beautiful waist-length necklace with celestial charms.",
-                price: 42.00,
-                image: "product2.jpg"
-            },
-            {
-                id: 3,
-                name: "Ear Piercing",
-                description: "Stunning celestial-themed ear piercing set.",
-                price: 73.50,
-                image: "product3.png"
-            }
+            { id: 1, name: "Moon Necklace", price: 59.99, image: "product1.png" },
+            { id: 2, name: "Waist Necklace", price: 42.00, image: "product2.jpg" },
+            { id: 3, name: "Ear Piercing", price: 73.50, image: "product3.png" },
+            { id: 4, name: "Celestial Piece 1", price: 22.00, image: "piece1.jpg" },
+            { id: 5, name: "Celestial Piece 2", price: 10.00, image: "piece2.jpg" },
+            { id: 6, name: "Celestial Piece 3", price: 10.00, image: "piece3.jpg" }
         ];
 
-        // Add to Cart
         function addToCart(e) {
             const accessoryId = parseInt(e.currentTarget.getAttribute('data-id'));
             const product = products.find(p => p.id === accessoryId);
             cart.push(product);
             updateCartCount();
 
-            // Animation feedback
             const btn = e.currentTarget;
             btn.innerHTML = '<i class="fas fa-check"></i> Added!';
             btn.disabled = true;
@@ -1320,7 +1237,6 @@
             }, 1000);
         }
 
-        // Add to AI Builder
         function addToBuilder(e) {
             const accessoryId = parseInt(e.currentTarget.getAttribute('data-id'));
             const product = products.find(p => p.id === accessoryId);
@@ -1329,14 +1245,13 @@
                     selectedItems.push(product);
                     renderSelectedItems();
                 } else {
-                    alert('You can select up to 5 items only.');
+                    alert('Max 5 items allowed');
                 }
             } else {
-                alert('Item already selected.');
+                alert('Item already selected');
             }
         }
 
-        // Render selected items in AI builder
         function renderSelectedItems() {
             selectedItemsContainer.innerHTML = '';
             selectedItems.forEach(item => {
@@ -1351,54 +1266,62 @@
             document.querySelectorAll('.remove-item').forEach(button => {
                 button.addEventListener('click', removeSelectedItem);
             });
-            generateBtn.disabled = selectedItems.length < 2 || selectedItems.length > 5;
+            generateBtn.disabled = selectedItems.length < 2;
         }
+
         function removeSelectedItem(e) {
             const accessoryId = parseInt(e.currentTarget.getAttribute('data-id'));
             selectedItems = selectedItems.filter(item => item.id !== accessoryId);
             renderSelectedItems();
         }
 
-        // Generate AI design
         generateBtn.addEventListener('click', function () {
             generateBtn.disabled = true;
             generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
             aiPlaceholder.style.display = 'none';
             aiResultImage.style.display = 'none';
             saveDesignBtn.style.display = 'none';
+
+            const selectedIDs = selectedItems.map(item => item.id);
+            const allNewPieces = [4,5,6].every(id => selectedIDs.includes(id));
+
             setTimeout(() => {
-                aiResultImage.src = 'https://via.placeholder.com/200x200.png?text=Custom+Design';
+                if (allNewPieces) {
+                    aiResultImage.src = 'product2.jpg';
+                    aiResultImage.alt = 'Special Waist Necklace Design';
+                } else {
+                    aiResultImage.src = 'https://via.placeholder.com/200x200.png?text=Custom+Design';
+                }
+
                 aiResultImage.style.display = 'block';
                 generateBtn.disabled = false;
                 generateBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i> Generate Custom Design';
                 saveDesignBtn.style.display = 'inline-block';
+
+                if (allNewPieces) {
+                    alert('Special cosmic trilogy combination detected!');
+                }
             }, 3000);
         });
 
-        // Save design button functionality
         saveDesignBtn.addEventListener('click', () => {
-            alert('Design saved to your cart!');
-            const product = { name: "Custom AI Design", price: 0 };
-            cart.push(product);
+            alert('Design saved to cart!');
+            cart.push({ name: "Custom AI Design", price: 0 });
             updateCartCount();
         });
 
-        // Update cart count display
-        function updateCartCount() {
-            cartCount.textContent = cart.length;
-        }
+        function updateCartCount() { cartCount.textContent = cart.length; }
 
-        // Render cart items in the cart modal
         function renderCartItems() {
             cartItemsList.innerHTML = '';
             if (cart.length === 0) {
-                cartItemsList.innerHTML = '<p>Your cart is empty.</p>';
+                cartItemsList.innerHTML = '<p>Empty cart</p>';
                 return;
             }
             cart.forEach((item, index) => {
                 const itemDiv = document.createElement('div');
                 itemDiv.innerHTML = `
-                  <span>${item.name} - ${item.price ? item.price.toFixed(2) + " DT" : "0.00 DT"}</span>
+                  <span>${item.name} - ${item.price?.toFixed(2) || '0.00'} DT</span>
                   <button data-index="${index}">Remove</button>
                 `;
                 cartItemsList.appendChild(itemDiv);
@@ -1413,20 +1336,18 @@
             });
         }
 
-        // Open cart modal when cart icon clicked
         cartIcon.addEventListener('click', e => {
             e.preventDefault();
             renderCartItems();
             cartModal.style.display = 'block';
         });
-        // Close cart modal buttons
+
         cartClose.addEventListener('click', () => cartModal.style.display = 'none');
         closeCartBtn.addEventListener('click', () => cartModal.style.display = 'none');
         window.addEventListener('click', e => {
             if (e.target === cartModal) cartModal.style.display = 'none';
         });
 
-        // Login and Signup modal toggle
         function openModal(modal) { modal.style.display = 'block'; }
         function closeModal(modal) { modal.style.display = 'none'; }
         loginLink.addEventListener('click', (e) => { e.preventDefault(); openModal(loginModal); });
@@ -1444,12 +1365,10 @@
             if (e.target === signupModal) closeModal(signupModal);
         });
 
-        // Dark mode toggle
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
 
-        // Attach event listeners to product buttons after DOM load
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.add-to-cart').forEach(button => {
                 button.addEventListener('click', addToCart);
@@ -1459,15 +1378,14 @@
             });
         });
 
-        // Optional: Prevent form submissions (for demo)
         document.getElementById('login-form').addEventListener('submit', e => {
             e.preventDefault();
-            alert('Login submitted!');
+            alert('Logged in!');
             closeModal(loginModal);
         });
         document.getElementById('signup-form').addEventListener('submit', e => {
             e.preventDefault();
-            alert('Signup submitted!');
+            alert('Account created!');
             closeModal(signupModal);
         });
     </script>
